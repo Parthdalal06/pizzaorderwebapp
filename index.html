@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PizzaOrder">
+<head>
+  <title>Order-O-Pizza</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="pizzaorder.controller.js"></script>
+  
+</head>
+<body ng-controller="pizzalistController">
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()" style="margin-top:40px">&times;</a>
+  <div class=" shopping-cart">
+  <!-- Title -->
+  <div class="title">
+    Shopping Bag
+  </div>
+ 
+  <div class="item" ng-repeat="orderitem in orderlist track by $index">
+    <div class="image">
+      <img src="pizza.jpg" alt="" height="50px" width="50px"/>
+    </div>
+ 
+    <div class="description col-md-3">
+      <span>{{orderitem.name}}</span>
+      <span>{{orderitem.ingredients}}</span>
+      <span>Rs. {{orderitem.price}}</span>
+    </div>
+ 
+    
+    <div class="total-price col-md-2">Rs. {{orderitem.price}}</div>
+  </div>
+  <div class="title">
+  Order Total : Rs. {{nettotalsum}} <button class="btn btn-primary pull-right" ng-click="confirmorder()" ng-disabled="nettotalsum==0" ><span>Confirm Order</span></Button></div>
+  </div>
+</div>
+<div class="container-fluid" >
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header" style="width:90%">
+      <a class="navbar-brand" href="#">
+        <img alt="Brand" src="logo.png" width="40px" height="40px">
+      </a>
+	   <h1>Order-O-Pizza</h1>
+	    
+    </div>
+	
+    <a class="pull-right" href="#" ng-click="openNav()">
+        <img alt="cart" src="cart.png">
+		<p>{{orderlist.length}} in cart</p>
+      </a>
+   
+
+
+
+	
+  </div>
+</nav>
+ <div  class="container" style="margin-top:100px"> 
+	<div class="row" >
+  <div class="col-sm-3 col-md-3" ng-repeat="pizzadata in listpizza">
+    <div class="thumbnail">
+      <img src="pizza.jpg" alt="Pizza loading">
+      <div class="caption">
+        <h3>{{pizzadata.name}}</h3>
+        <p>{{pizzadata.ingredients}}</p>
+		<p>Rs. {{pizzadata.price}}</p>
+        <p><a href="#" ng-click="addtoorder(pizzadata)"	class="btn btn-primary" role="button">Add to cart</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+   
+</div>
+</div>
+</body>
+</html>

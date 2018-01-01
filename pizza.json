@@ -1,0 +1,53 @@
+[ 
+   { "name"  : "Margherita"
+   , "ingredients"   : "tomato with loads of cheese"
+   , "price"        :  240
+   , "signature" :  true
+     }
+,
+   { "name"  : "Corn"
+   , "ingredients"   : "Corn with Cheese"
+   , "price"        :  390
+   , "signature" :  false
+     }
+,  { "name"  : "Peppy Paneer"
+   , "ingredients"   : "Paneer with peppers"
+   , "price"        :  450
+   , "signature" :  false
+     }
+,  { "name"  : "Farmhouse"
+   , "ingredients"   : "all veggies mix"
+   , "price"        :  270
+   , "signature" :  false
+     }
+,  { "name"  : "Chilly peppers"
+   , "ingredients"   : "chilly with tomato and peppers"
+   , "price"        :  320
+   , "signature" :  true
+     }
+,  { "name"  : "Chicken sausage"
+   , "ingredients"   : "chicken with cheese overloaded"
+   , "price"        :  520
+   , "signature" :  true
+     }
+,  { "name"  : "Onion"
+   , "ingredients"   : "onion with cheese and capsicum "
+   , "price"        :  230
+   , "signature" :  true
+     }
+,  { "name"  : "Capsicum"
+   , "ingredients"   : "capsicum with loaded cheese"
+   , "price"        :  420
+   , "signature" :  false
+     }
+,  { "name"  : "bell peppers"
+   , "ingredients"   : "olives with peppers and cheese"
+   , "price"        :  280
+   , "signature" :  true
+     }
+,  { "name"  : "Chilly chicken"
+   , "ingredients"   : "Chilly sprinkled over chicken"
+   , "price"        :  230
+   , "signature" :  true
+     }
+]
